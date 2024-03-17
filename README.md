@@ -21,7 +21,7 @@ pip install -r requirements.txt
 python annotation.py
 ```
 
-### Tool Tutorials
+## Tool Tutorials
 
 When running the annotation.py file, a window will appear prompting you to select an MP4 file (recommended video size is 1280x1024). After selecting the file, you will see the main interface as shown in the following image:
 
@@ -30,17 +30,19 @@ When running the annotation.py file, a window will appear prompting you to selec
   <i>Annotation Tool Demo</i>
 </p>
 
-**Information displayed**
+### Information displayed
 - Frame: Frame number from the video (counting from 1).
 - Boxes: Number of Bounding Boxes in the current frame.
 - Object ID: Serial number of the object in the video.
 - Class: Name of the object, describing the type of damage.
 - Tutorial: Instructions for keyboard shortcuts.
 
-**How to draw Bounding Box**
+### How to draw Bounding Box
+
 Bounding Box is drawn by selecting two points (these two points are located in 2 opposite corners of the Box). When you complete selecting 2 points, a Box will be drawn on the screen and Boxes increases by 1 unit with each Box drawn.
 
-**Shortcuts**
+### Shortcuts
+
 - N: Move to the next Frame of the current Frame (Frame increases by 1 unit).
 - B: Return to the Frame before the current Frame (Frame is reduced by 1 unit).
 - R: Delete the Bounding Box just drawn (Boxes are reduced by 1 unit).
@@ -49,12 +51,14 @@ Bounding Box is drawn by selecting two points (these two points are located in 2
 - C: Change the object name (Class will change to A, B, C, D, E and A respectively).
 - Esc: Exit the tool.
 
-**Saved data**
+### Saved data
+
 After exiting the tool, saved data includes:
 - A gt.txt file contains Ground Truth information in the following form:
+  
 `{frame_number}, {object_id}, {xmin}, {ymin}, {width}, {height}, {conf}, x, y, z`
+
 - A class.txt file contains information about which Frame, which Object ID and which Class, stored in the form:
+  
  `{frame_number}, {object_id}, {class}`
 
-
-**THANK YOU SO MUCH**
