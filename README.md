@@ -16,9 +16,11 @@ git clone https://github.com/shredder0812/Annotation_Tool.git
 pip install -r requirements.txt
 ```
 
-- Run annotation.py and use.
+- Run `annotation.py`,`annotation640x512.py` or `annotation640data.py` and use.
 ```bash
-python annotation.py
+python  annotation.py
+        annotation640x512.py
+        annotation640data.py
 ```
 
 ## Tool Tutorials
@@ -30,6 +32,16 @@ When running the annotation.py file, a window will appear prompting you to selec
   <i>Annotation Tool Demo</i>
 </p>
 
+**Notes**
+- When selecting the input video, it is important to note that for each video, create an empty folder to contain that video. After interacting with the tool and exiting the tool, the data for each video will be automatically saved into the corresponding folder containing that video.
+- Below are the tool files that can be used with each video size and the size at which the data will be saved:
+
+| File                   | Video's size           | Data format    |
+| ---------------------- | ---------------------- | -------------- |
+| `annotation.py`        | **1280x1024**          | **1280x1024**  |
+| `annotation640x512.py` | **1280x1024; 640x512** | **1280x1024**  |
+| `annotation640data.py` | **640x512**            | **640x512**    |
+
 ### Information displayed
 - Frame: Frame number from the video (counting from 1).
 - Boxes: Number of Bounding Boxes in the current frame.
@@ -39,7 +51,9 @@ When running the annotation.py file, a window will appear prompting you to selec
 
 ### How to draw Bounding Box
 
-Bounding Box is drawn by selecting two points (these two points are located in 2 opposite corners of the Box). When you complete selecting 2 points, a Box will be drawn on the screen and Boxes increases by 1 unit with each Box drawn.
+Bounding Box is drawn by selecting two points (these two points are located in 2 opposite corners of the Box). 
+
+While drawing, the Bounding Box line will be green. Once two points are selected, indicating the completion of drawing, the Box will be displayed on the screen with a red border. At the same time, the Boxes panel will count the number of boxes in the frame.
 
 ### Shortcuts
 
