@@ -4,7 +4,7 @@
 This tool is designed for physicians to mark the location of lesions in endoscopic images. The collected data will be used to develop applications for lesion detection and tracking in endoscopic images.
 
 ## Usage
-### Install
+### With Python files
 
 - Clone this repository.
 ```bash
@@ -22,6 +22,9 @@ python  annotation.py
         annotation640x512.py
         annotation640data.py
 ```
+### With Executable files
+- Download .exe files from Google Drive: 
+<a href="https://drive.google.com/drive/folders/1w7Hv20d_KkRX8ELBXcDjtHqB5vwzFnFq?usp=sharing" target="_blank">Annotation Tool (Executable files)</a>
 
 ## Tool Tutorials
 
